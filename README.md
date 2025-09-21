@@ -109,9 +109,9 @@ The Power BI report contains **4 pages**:
     - Filters for Year and Country enable targeted exploration of top-rated films within specific timeframes and regions.
 
 
-- ### Page 4 – IMDb Score Bucket
+- ### Page 4 – IMDb Score Distribution
 
-    ![IMDb Ratings](images/report/imdb_score_distribution.png "IMDb Ratings")
+    ![IMDb Score Distribution](images/report/imdb_score_distribution.png "IMDb Score Distribution")
 
     Histogram “Total Movies by IMDb Score” shows most movies cluster between scores of 6.0 and 8.0, with a peak around 7.0.
     - The distribution highlights that extreme low or high scores are relatively rare.
