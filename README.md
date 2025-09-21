@@ -73,7 +73,7 @@ The Power BI report contains **4 pages**:
 
 - ### Page 1 – Executive Summary
     KPI cards at the top summarize Total Movies, Total Domestic Gross, Total Budget, Total Profit, Average Budget, and Average IMDb Rating for context. Field parameter slicers allow switching between views of **Total Profit**, **Domestic Gross**, and **Budget** by movie, instantly revealing different leaders in each category.
-    Year and Country slicers on the left allow filtering the profit ranking by time period or production location.
+    Year and Country slicers on the left allow filtering the profit ranking by year and country.
 
     ![Executive Summary - Total Profit](images/report/executive_summary_profit.png "Executive Summary - Total Profit")
     
@@ -96,7 +96,7 @@ The Power BI report contains **4 pages**:
 
     This page provides a detailed breakdown of the dataset by movie genre, helping identify dominant categories and niche segments in the film industry.
     - The column chart “Total Movies by Genres” ranks genres by the number of movies, sorted from most to least common.
-    - Drama, Comedy, and Documentary emerge as the top three genres, indicating their prevalence in the dataset.
+    - Drama, Comedy, and Romance emerge as the top three genres, indicating their prevalence in the dataset.
     - Year and Country slicers allow filtering to see how genre popularity changes over time or across regions.
 
 - ### Page 3 – IMDb Ratings
@@ -104,16 +104,16 @@ The Power BI report contains **4 pages**:
     ![IMDb Ratings](images/report/imdb_ratings.png "IMDb Ratings")
 
     This page focuses on the highest-rated movies in the dataset, offering a quick view of standout titles based on IMDb scores.
-    - The bar chart “IMDB Rating by Movie” lists movies in descending order of rating, with exact scores displayed.
+    - The bar chart “IMDb Rating by Movie” lists movies in descending order of rating, with exact scores displayed.
     - The Shawshank Redemption leads with a score of 9.3, followed by other critically acclaimed titles such as The Godfather and The Dark Knight.
-    - Filters for Year and Country enable targeted exploration of top-rated films within specific timeframes or regions.
+    - Filters for Year and Country enable targeted exploration of top-rated films within specific timeframes and regions.
 
 
 - ### Page 4 – IMDb Score Bucket
 
     ![IMDb Ratings](images/report/imdb_score_distribution.png "IMDb Ratings")
 
-    Histogram “Total Movies by IMDB Score” shows most movies cluster between scores of 6.0 and 8.0, with a peak around 7.0.
+    Histogram “Total Movies by IMDb Score” shows most movies cluster between scores of 6.0 and 8.0, with a peak around 7.0.
     - The distribution highlights that extreme low or high scores are relatively rare.
     - Year and Country slicers allow users to analyze how score distributions vary across time periods and geographies.
 
@@ -134,9 +134,9 @@ The **Power BI report** brought these findings to life across four interactive p
 
 2. **Genres** – *Drama* and *Comedy* dominated the dataset, together accounting for a significant share of all films.
 
-3. **IMDB Ratings** – *The Shawshank Redemption* (9.3), *The Godfather* (9.2), and *The Dark Knight* (9.0) topped the ratings chart.
+3. **IMDb Ratings** – *The Shawshank Redemption* (9.3), *The Godfather* (9.2), and *The Dark Knight* (9.0) topped the ratings chart.
 
-4. **IMDB Score Distribution** – A histogram confirmed that most movies cluster between scores of **6.0 and 8.0**, with a pronounced peak around **7.0**, reflecting the industry’s tendency toward mid‑to‑high ratings.
+4. **IMDb Score Distribution** – A histogram confirmed that most movies cluster between scores of **6.0 and 8.0**, with a pronounced peak around **7.0**, reflecting the industry’s tendency toward mid‑to‑high ratings.
 
 **Together, these results paint a clear picture:**  
 The movie industry’s biggest financial successes are not always its highest‑rated films, popular genres dominate production volume, and audience ratings tend to gravitate toward a narrow quality band.  
