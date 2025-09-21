@@ -1,0 +1,54 @@
+SET
+	LC_MONETARY = 'en_US';
+
+SELECT
+	*
+FROM
+	MOVIES_ANALYSIS;
+
+-- Movies with the highest profit
+SELECT
+	MOVIE_TITLE,
+	DOMESTIC_GROSS,
+	BUDGET,
+	DOMESTIC_GROSS - BUDGET AS PROFIT
+FROM
+	MOVIES_ANALYSIS
+ORDER BY
+	PROFIT DESC;
+
+/* 
+IMDb score bucket (0.5-point ranges) with the highest number of movies 
+among the Top 250 titles where num_voted_users > 25000
+*/
+WITH
+	IMDB_TOP_250 AS (
+		SELECT
+			MOVIE_TITLE,
+			IMDB_SCORE,
+			NUM_VOTED_USERS
+		FROM
+			MOVIES_ANALYSIS
+		WHERE
+			NUM_VOTED_USERS > 25000
+		ORDER BY
+			IMDB_SCORE DESC
+		LIMIT
+			250
+	)
+SELECT
+	CONCAT(
+		ROUND(
+			((WIDTH_BUCKET(IMDB_SCORE, 0, 10, 20) - 1) * 0.5),
+			1
+		),
+		'-',
+		ROUND((WIDTH_BUCKET(IMDB_SCORE, 0, 10, 20) * 0.5), 1)
+	) AS SCORE_BUCKET,
+	COUNT(*) AS MOVIE_COUNT
+FROM
+	IMDB_TOP_250
+GROUP BY
+	SCORE_BUCKET
+ORDER BY
+	MOVIE_COUNT DESC;
